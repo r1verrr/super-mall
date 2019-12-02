@@ -2,7 +2,8 @@
   <div id="home">
       <nav-bar class="home-nav"><div slot="center">购物街</div></nav-bar>
       <home-swiper :banners="banners"/>
-      <RecommendView/>
+      <recommend-view :recommends= 'recommends'/>
+      <FeatureView />
     </div>
 
 </template>
@@ -13,8 +14,9 @@
 
   import HomeSwiper from './childComps/HomeSwiper'
   // import { getHomeMultidata} from "network/home"
-  import { getHomeMultidata} from "../../network/home"
+  import {getHomeMultidata} from "network/home"
   import RecommendView from './childComps/RecommendView'
+  import FeatureView from './childComps/FeatureView'
   
 
 
@@ -25,7 +27,9 @@ export default {
     NavBar,
     getHomeMultidata,
     HomeSwiper,
-    RecommendView
+    RecommendView,
+    FeatureView
+  
   },
   data(){
     return {
@@ -33,17 +37,24 @@ export default {
        recommends:[]
     }
   },
-  created(){
-    //1.请求多个数据
-     getHomeMultidata().then(
-      res =>{
-        console.log(res);
-        this.banners = res.data.banners.list;
-        this.recommends = res.data.recommends.list;
-      }
-    )
+  // created(){
+  //   //1.请求多个数据
+  //    getHomeMultidata().then(
+  //     res =>{
+  //       console.log(res);
+  //       this.banners = res.data.banners.list;
+  //       this.recommends = res.data.recommends.list;
+  //     }
+  //   )
 
-  }
+  // }
+      created() {
+        getHomeMultidata().then(res => {
+          // this.result = res;
+          this.banners = res.data.banner.list;
+          this.recommends = res.data.recommend.list;
+        })
+      },
 }
 </script>
 
