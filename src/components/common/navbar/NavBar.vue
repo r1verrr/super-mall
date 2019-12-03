@@ -20,6 +20,7 @@ export default {
   display: flex;
   line-height: 44px;
   text-align: center;
+  /* position: fixed; */
 
 }
 .left, .right{

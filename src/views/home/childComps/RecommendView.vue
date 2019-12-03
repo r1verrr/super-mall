@@ -29,6 +29,9 @@ export default {
     width: 100%; 
     text-align: center;
     font-size: 12px;
+
+    padding: 15px 0 15px;
+    border-bottom: 8px solid #eeeeee;
 }
 .recommends-item{
   flex:1;
