@@ -18,3 +18,4 @@ npm run build
 ### Customize configuration
 See [Configuration Reference](https://cli.vuejs.org/config/).
 
+![image](https://github.com/r1verrr/super/blob/master/README.assets/wps1.jpg)
