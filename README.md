@@ -19,3 +19,6 @@ npm run build
 See [Configuration Reference](https://cli.vuejs.org/config/).
 
 ![image](https://github.com/r1verrr/super/blob/master/README.assets/wps1.jpg)
+
+
+个人邮箱:739026055@qq.com
