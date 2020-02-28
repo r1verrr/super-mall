@@ -7,7 +7,7 @@
         <DetailShopInfo :shop="shop"/>
         <DetailGoodsInfo :detailInfo="detailInfo" @imageLoad="imageLoad"/>
         <DetailParamInfo :paramInfo="paramInfo"/>
-        <DetialCommentInfo :commentInfo />
+        <DetialCommentInfo :commentInfo="commentInfo" />
    </scroll>
  
   
